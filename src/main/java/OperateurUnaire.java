@@ -6,14 +6,14 @@ public abstract class OperateurUnaire implements Noeud{
 		op=s;
 		opG=n;
 	}
-	public String getOp(){
+	public String getOperateur(){
 		return op;
 	}
-	public Noeud getOpG(){
+	public Noeud getOperateurGauche(){
 		return opG;
 	}
 
-	public void Accept(Visiteur v){
+	public void accept(Visiteur v){
 		v.visiterUnaire(this);
 	}
 

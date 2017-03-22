@@ -7,11 +7,11 @@ public abstract class OperateurBinaire  extends OperateurUnaire{
 		opD=nd;
 	}
 	
-	public Noeud getOpD(){
+	public Noeud getOperateurDroit(){
 		return opD;
 	}
 
-	public void Accept(Visiteur v){
+	public void accept(Visiteur v){
 		v.visiterBinaire(this);
 	}
 

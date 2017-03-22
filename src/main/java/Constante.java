@@ -5,7 +5,7 @@ public class Constante implements Noeud{
 	}
 	public int getValeur(){return valeur;}
 
-	public void Accept(Visiteur v){
+	public void accept(Visiteur v){
 		v.visiterConstante(this);
 	}
 
