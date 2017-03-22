@@ -36,22 +36,6 @@ public void visiterBinaire(OperateurBinaire operateurBinaire) {
 ```
 Le fonctionnement des méthodes visiterMultiplication et visiterBinaire sont similaires à la méthode visiterAddition pour le VisiteurPostfixe.
 ```java
-    public void visiterNegation(Negation negation) {
-        negation.getOperateurGauche().accept(this);
-        System.out.print(negation.getOperateur());
-    }
-
-    public void visiterConstante(Constante constante) {
-
-        System.out.print(constante.getValeur());
-    }
-
-    public void visiterUnaire(OperateurUnaire operateurUnaire) {
-
-        operateurUnaire.getOperateurGauche().accept(this);
-        System.out.print(operateurUnaire.getOperateur());
-    }
-
 
 }
 ```
