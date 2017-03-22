@@ -1,7 +1,9 @@
 public class VisiteurPostfixe implements Visiteur {
 
     public void visiterAddition(Addition addition) {
-
+        addition.getOperateurGauche().accept(this);
+        addition.getOperateurDroit().accept(this);
+        System.out.print(addition.getOperateur());
     }
 
     public void visiterMultiplication(Multiplication multiplication) {
@@ -12,7 +14,8 @@ public class VisiteurPostfixe implements Visiteur {
     }
 
     public void visiterNegation(Negation negation) {
-
+        negation.getOperateurGauche().accept(this);
+        System.out.print(negation.getOperateur());
     }
 
     public void visiterConstante(Constante constante) {

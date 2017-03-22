@@ -11,8 +11,9 @@ public class ExpressionArithmetique {
 
 	public void afficherPostFixe() {
 		System.out.println("\n postfixe:");
-		// TODO 
-		
+
+		VisiteurPostfixe visiteurPostfixe = new VisiteurPostfixe();
+		this.getRacine().accept(visiteurPostfixe);
 	}
 
 	public int calculerValeur() {
