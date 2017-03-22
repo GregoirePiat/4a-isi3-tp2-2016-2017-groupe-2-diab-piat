@@ -24,12 +24,14 @@ public class ExpressionArithmetique {
 	}
 
 	public int calculerValeur() {
-		// TODO 
+		VisiteurCalculerValeur visiteurCalculerValeur = new VisiteurCalculerValeur();
+		//TODO regarder optional(int) pour le retour
 		return 0;
 	}
 
 	public int calculerHauteur() {
-		// TODO 
+		VisiteurCalculerHauteur visiteurCalculerHauteur = new VisiteurCalculerHauteur();
+		//TODO regarder optional(int) pour le retour
 		return 0;
 	}
 	public void afficherInFixe() {
