@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Addition</OriginalElement>
+  <nodes>
+    <node x="134.0" y="371.0">Addition</node>
+    <node x="0.0" y="371.0">Multiplication</node>
+    <node x="207.5" y="269.5">Negation</node>
+    <node x="99.50000000000001" y="79.0">OperateurUnaire</node>
+    <node x="45.5" y="247.0">OperateurBinaire</node>
+    <node x="288.5" y="101.0">Constante</node>
+    <node x="0.0" y="445.0">ExpressionArithmetique</node>
+    <node x="279.0" y="445.0">Visiteur</node>
+    <node x="232.0" y="0.0">Noeud</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="OperateurBinaire" target="OperateurUnaire">
+      <point x="0.0" y="-37.0" />
+      <point x="116.5" y="222.0" />
+      <point x="141.75" y="222.0" />
+      <point x="-42.25" y="59.0" />
+    </edge>
+    <edge source="Addition" target="OperateurBinaire">
+      <point x="0.0" y="-14.5" />
+      <point x="176.0" y="346.0" />
+      <point x="152.0" y="346.0" />
+      <point x="35.5" y="37.0" />
+    </edge>
+    <edge source="Constante" target="Noeud">
+      <point x="0.0" y="-37.0" />
+      <point x="353.0" y="54.0" />
+      <point x="286.75" y="54.0" />
+      <point x="18.25" y="14.5" />
+    </edge>
+    <edge source="OperateurUnaire" target="Noeud">
+      <point x="0.0" y="-59.0" />
+      <point x="184.0" y="54.0" />
+      <point x="250.25" y="54.0" />
+      <point x="-18.25" y="14.5" />
+    </edge>
+    <edge source="Negation" target="OperateurUnaire">
+      <point x="0.0" y="-14.5" />
+      <point x="251.5" y="222.0" />
+      <point x="226.25" y="222.0" />
+      <point x="42.25" y="59.0" />
+    </edge>
+    <edge source="Multiplication" target="OperateurBinaire">
+      <point x="0.0" y="-14.5" />
+      <point x="57.0" y="346.0" />
+      <point x="81.0" y="346.0" />
+      <point x="-35.5" y="37.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8963317384370016" x="209.0" y="272.81939501779357" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
