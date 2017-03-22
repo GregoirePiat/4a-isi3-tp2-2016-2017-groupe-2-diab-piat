@@ -8,7 +8,9 @@
 ![Graph](images/ClassDiagram.png)
 
 ## Question 2
+*Expliquer le code ajouté*
 
+## Question 3
 ```java
 
 public void visiterAddition(Addition addition) {
@@ -59,10 +61,6 @@ Enfin, les constantes sont simplement affichées.
 
 Les autres visiteurs sont disponibles ici : [VisiteurPrefixe.java](/src/main/java/VisiteurPrefixe.java) et [VisiteurInfixe.java](/src/main/java/VisiteurInfixe.java)
 
-
-
-## Question 3
-*Expliquer le code ajouté*
 
 ## Question 4
 *Expliquer le code ajouté*
