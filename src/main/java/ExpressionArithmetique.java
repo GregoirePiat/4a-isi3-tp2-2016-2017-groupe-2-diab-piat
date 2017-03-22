@@ -27,7 +27,8 @@ public class ExpressionArithmetique {
 	}
 	public void afficherInFixe() {
 		System.out.println("\n infixe:");
-		// TODO 
+		VisiteurInfixe visiteurInfixe = new VisiteurInfixe();
+		this.getRacine().accept(visiteurInfixe);
 		
 	}
 	
