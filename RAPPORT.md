@@ -19,13 +19,15 @@ public void visiterAddition(Addition addition) {
 ```
 Dans cette méthode du VisiteurPostfixe, nous affichons d'abord les opérateurs autour de l'opérateur d'addition, puis nous affichons le "+". Une fois que le visiteur passera, l'affichage s'effectuera.
 ```java
-    public void visiterMultiplication(Multiplication multiplication) {
+public void visiterMultiplication(Multiplication multiplication) {
 
-        multiplication.getOperateurGauche().accept(this);
-        multiplication.getOperateurDroit().accept(this);
-        System.out.print(multiplication.getOperateur());
-    }
-
+    multiplication.getOperateurGauche().accept(this);
+    multiplication.getOperateurDroit().accept(this);
+    System.out.print(multiplication.getOperateur());
+}
+```
+Le fonctionnement de la méthode visiterMultiplication est similaire à la méthode visiterAddition pour le VisiteurPostfixe.
+```java
     public void visiterNegation(Negation negation) {
         negation.getOperateurGauche().accept(this);
         System.out.print(negation.getOperateur());
