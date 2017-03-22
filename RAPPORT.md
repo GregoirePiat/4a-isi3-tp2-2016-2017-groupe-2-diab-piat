@@ -57,7 +57,7 @@ public void visiterConstante(Constante constante) {
 ```
 Enfin, les constantes sont simplement affichées.
 
-Les autres visiteurs sont disponibles ici : [VisiteurPrefixe.java](/src/main/java/VisiteurPrefixe.java) et [VisiteurInfixe.java](/src/main/java/VisiteurInfixe.java) /src/main/java/VisiteurInfixe.java
+Les autres visiteurs sont disponibles ici : [VisiteurPrefixe.java](/src/main/java/VisiteurPrefixe.java) et [VisiteurInfixe.java](/src/main/java/VisiteurInfixe.java)
 
 
 
