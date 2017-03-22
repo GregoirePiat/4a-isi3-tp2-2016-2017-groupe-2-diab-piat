@@ -8,17 +8,17 @@
 ![Graph](images/ClassDiagram.png)
 
 ## Question 2
-*Expliquer le code ajouté*
 
-```javascript
-public class VisiteurPostfixe implements Visiteur {
+```java
 
-    public void visiterAddition(Addition addition) {
-        addition.getOperateurGauche().accept(this);
-        addition.getOperateurDroit().accept(this);
-        System.out.print(addition.getOperateur());
-    }
-
+public void visiterAddition(Addition addition) {
+    addition.getOperateurGauche().accept(this);
+    addition.getOperateurDroit().accept(this);
+    System.out.print(addition.getOperateur());
+}
+```
+Dans cette méthode du VisiteurPostfixe, nous affichons d'abord les opérateurs autour de l'opérateur d'addition, puis nous affichons le "+". Une fois que le visiteur passera, l'affichage s'effectuera.
+```java
     public void visiterMultiplication(Multiplication multiplication) {
 
         multiplication.getOperateurGauche().accept(this);
