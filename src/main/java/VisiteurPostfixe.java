@@ -5,6 +5,7 @@ public class VisiteurPostfixe implements Visiteur {
     }
 
     public void visiterMultiplication(Multiplication multiplication) {
+
         multiplication.getOperateurGauche().accept(this);
         multiplication.getOperateurDroit().accept(this);
         System.out.print(multiplication.getOperateur());
@@ -12,6 +13,11 @@ public class VisiteurPostfixe implements Visiteur {
 
     public void visiterNegation(Negation negation) {
 
+    }
+
+    public void visiterConstante(Constante constante) {
+
+        System.out.print(constante.getValeur());
     }
 
     public void visiterUnaire(OperateurUnaire operateurUnaire) {
