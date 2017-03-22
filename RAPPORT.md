@@ -5,6 +5,7 @@
 
 ## Question 1
 *Insérer un schéma du patron de conception mis en place*
+[Graph](images/ClassDiagram.png)
 
 ## Question 2
 *Expliquer le code ajouté*
