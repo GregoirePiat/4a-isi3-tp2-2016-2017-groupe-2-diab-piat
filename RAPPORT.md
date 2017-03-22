@@ -10,7 +10,7 @@
 ## Question 2
 *Expliquer le code ajouté*
 
-’’’java
+```javascript
 public class VisiteurPostfixe implements Visiteur {
 
     public void visiterAddition(Addition addition) {
@@ -50,7 +50,10 @@ public class VisiteurPostfixe implements Visiteur {
 
     }
 }
-’’’
+```
+
+
+
 
 ## Question 3
 *Expliquer le code ajouté*
