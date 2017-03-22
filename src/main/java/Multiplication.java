@@ -4,6 +4,7 @@ public class Multiplication extends OperateurBinaire{
 		super("*", ng, nd);
 	}
 
-	
-
+	public void Accept(Visiteur v){
+		v.visiterMultiplication(this);
+	}
 }
