@@ -8,6 +8,7 @@ public class TestArbreBinaire {
 		ExpressionArithmetique exp = new ExpressionArithmetique(racine);
 
 		exp.afficherInFixe();
+		exp.afficherPrefixe();
 		System.out.println("\n calcul valeur: " + exp.calculerValeur());
 		System.out.println("\n calcul hauteur: " + exp.calculerHauteur());
 		exp.afficherPostFixe();

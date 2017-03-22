@@ -16,6 +16,13 @@ public class ExpressionArithmetique {
 		this.getRacine().accept(visiteurPostfixe);
 	}
 
+	public void afficherPrefixe() {
+		System.out.println("\n prefixe:");
+
+		VisiteurPrefixe visiteurPrefixe = new VisiteurPrefixe();
+		this.getRacine().accept(visiteurPrefixe);
+	}
+
 	public int calculerValeur() {
 		// TODO 
 		return 0;
