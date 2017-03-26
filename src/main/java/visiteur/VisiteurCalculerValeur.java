@@ -1,3 +1,8 @@
+package visiteur;
+
+import arbreBinaire.*;
+import visiteur.Visiteur;
+
 import java.util.OptionalInt;
 
 public class VisiteurCalculerValeur implements Visiteur {

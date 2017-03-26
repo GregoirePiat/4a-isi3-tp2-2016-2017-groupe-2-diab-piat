@@ -13,22 +13,22 @@
 ## Question 3
 ```java
 
-public void visiterAddition(Addition addition) {
+public void visiterAddition(arbreBinaire.Addition addition) {
     addition.getOperateurGauche().accept(this);
     addition.getOperateurDroit().accept(this);
     System.out.print(addition.getOperateur());
 }
 ```
-Dans cette méthode du VisiteurPostfixe, nous affichons d'abord les opérateurs autour de l'opérateur d'addition, puis nous affichons le "+". Une fois que le visiteur passera, l'affichage s'effectuera.
+Dans cette méthode du visiteur.VisiteurPostfixe, nous affichons d'abord les opérateurs autour de l'opérateur d'addition, puis nous affichons le "+". Une fois que le visiteur passera, l'affichage s'effectuera.
 ```java
-public void visiterMultiplication(Multiplication multiplication) {
+public void visiterMultiplication(arbreBinaire.Multiplication multiplication) {
 
     multiplication.getOperateurGauche().accept(this);
     multiplication.getOperateurDroit().accept(this);
     System.out.print(multiplication.getOperateur());
 }
 
-public void visiterBinaire(OperateurBinaire operateurBinaire) {
+public void visiterBinaire(arbreBinaire.OperateurBinaire operateurBinaire) {
 
     operateurBinaire.getOperateurGauche().accept(this);
     operateurBinaire.getOperateurDroit().accept(this);
@@ -36,14 +36,14 @@ public void visiterBinaire(OperateurBinaire operateurBinaire) {
 
 }
 ```
-Le fonctionnement des méthodes visiterMultiplication et visiterBinaire sont similaires à la méthode visiterAddition pour le VisiteurPostfixe.
+Le fonctionnement des méthodes visiterMultiplication et visiterBinaire sont similaires à la méthode visiterAddition pour le visiteur.VisiteurPostfixe.
 ```java
-public void visiterNegation(Negation negation) {
+public void visiterNegation(arbreBinaire.Negation negation) {
     negation.getOperateurGauche().accept(this);
     System.out.print(negation.getOperateur());
 }
 
-public void visiterUnaire(OperateurUnaire operateurUnaire) {
+public void visiterUnaire(arbreBinaire.OperateurUnaire operateurUnaire) {
 
     operateurUnaire.getOperateurGauche().accept(this);
     System.out.print(operateurUnaire.getOperateur());
@@ -52,14 +52,14 @@ public void visiterUnaire(OperateurUnaire operateurUnaire) {
 Pour les négations, nous affichons d'abord l'opérateur gauche avant d'afficher le signe "-".
 
 ```java
-public void visiterConstante(Constante constante) {
+public void visiterConstante(arbreBinaire.Constante constante) {
 
     System.out.print(constante.getValeur());
 }
 ```
 Enfin, les constantes sont simplement affichées.
 
-Les autres visiteurs sont disponibles ici : [VisiteurPrefixe.java](/src/main/java/VisiteurPrefixe.java) et [VisiteurInfixe.java](/src/main/java/VisiteurInfixe.java)
+Les autres visiteurs sont disponibles ici : [visiteur.VisiteurPrefixe.java](/src/main/java/VisiteurPrefixe.java) et [visiteur.VisiteurInfixe.java](/src/main/java/VisiteurInfixe.java)
 
 
 ## Question 4

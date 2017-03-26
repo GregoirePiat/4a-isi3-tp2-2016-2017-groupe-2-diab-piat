@@ -1,3 +1,7 @@
+package visiteur;
+
+import arbreBinaire.*;
+
 import java.util.OptionalInt;
 
 public interface Visiteur {

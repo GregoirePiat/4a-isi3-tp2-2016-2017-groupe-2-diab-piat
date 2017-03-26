@@ -1,6 +1,10 @@
+package arbreBinaire;
+
+import visiteur.Visiteur;
+
 import java.util.OptionalInt;
 
-public class Constante implements Noeud{
+public class Constante implements Noeud {
 	private int valeur;
 	public Constante(int v){
 		valeur = v;

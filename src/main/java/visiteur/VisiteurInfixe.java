@@ -1,25 +1,37 @@
+package visiteur;
+
+import arbreBinaire.*;
+import visiteur.Visiteur;
+
 import java.util.OptionalInt;
 
-public class VisiteurPostfixe implements Visiteur {
+public class VisiteurInfixe implements Visiteur {
 
     public OptionalInt visiterAddition(Addition addition) {
         addition.getOperateurGauche().accept(this);
-        addition.getOperateurDroit().accept(this);
         System.out.print(addition.getOperateur());
+        addition.getOperateurDroit().accept(this);
         return OptionalInt.empty();
     }
 
     public OptionalInt visiterMultiplication(Multiplication multiplication) {
-
+        System.out.print("(");
         multiplication.getOperateurGauche().accept(this);
-        multiplication.getOperateurDroit().accept(this);
+        System.out.print(")");
+
         System.out.print(multiplication.getOperateur());
+
+        System.out.print("(");
+        multiplication.getOperateurDroit().accept(this);
+        System.out.print(")");
         return OptionalInt.empty();
     }
 
     public OptionalInt visiterNegation(Negation negation) {
-        negation.getOperateurGauche().accept(this);
+        System.out.print("(");
         System.out.print(negation.getOperateur());
+        negation.getOperateurGauche().accept(this);
+        System.out.print(")");
         return OptionalInt.empty();
     }
 

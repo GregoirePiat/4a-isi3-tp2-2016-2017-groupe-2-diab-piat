@@ -1,6 +1,10 @@
+package arbreBinaire;
+
+import visiteur.Visiteur;
+
 import java.util.OptionalInt;
 
-public class Addition extends OperateurBinaire{
+public class Addition extends OperateurBinaire {
 	public Addition(Noeud ng, Noeud nd) {
 		super("+", ng, nd);
 	}

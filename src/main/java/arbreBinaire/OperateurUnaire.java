@@ -1,6 +1,10 @@
+package arbreBinaire;
+
+import visiteur.Visiteur;
+
 import java.util.OptionalInt;
 
-public abstract class OperateurUnaire implements Noeud{
+public abstract class OperateurUnaire implements Noeud {
 	private String op;
 	private Noeud opG;
 	

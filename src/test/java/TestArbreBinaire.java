@@ -1,3 +1,9 @@
+import arbreBinaire.Addition;
+import arbreBinaire.Constante;
+import arbreBinaire.Multiplication;
+import arbreBinaire.Negation;
+import expressionArithmetique.ExpressionArithmetique;
+
 public class TestArbreBinaire {
 
 	public static void main(String[] args) {

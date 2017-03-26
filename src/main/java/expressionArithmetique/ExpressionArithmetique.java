@@ -1,3 +1,8 @@
+package expressionArithmetique;
+
+import arbreBinaire.Noeud;
+import visiteur.*;
+
 import java.util.OptionalInt;
 
 public class ExpressionArithmetique {

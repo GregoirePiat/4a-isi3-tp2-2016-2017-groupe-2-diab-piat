@@ -1,32 +1,30 @@
+package visiteur;
+
+import arbreBinaire.*;
+import visiteur.Visiteur;
+
 import java.util.OptionalInt;
 
-public class VisiteurInfixe implements Visiteur {
+public class VisiteurPrefixe implements Visiteur {
 
     public OptionalInt visiterAddition(Addition addition) {
-        addition.getOperateurGauche().accept(this);
         System.out.print(addition.getOperateur());
+        addition.getOperateurGauche().accept(this);
         addition.getOperateurDroit().accept(this);
         return OptionalInt.empty();
     }
 
     public OptionalInt visiterMultiplication(Multiplication multiplication) {
-        System.out.print("(");
-        multiplication.getOperateurGauche().accept(this);
-        System.out.print(")");
 
         System.out.print(multiplication.getOperateur());
-        
-        System.out.print("(");
+        multiplication.getOperateurGauche().accept(this);
         multiplication.getOperateurDroit().accept(this);
-        System.out.print(")");
         return OptionalInt.empty();
     }
 
     public OptionalInt visiterNegation(Negation negation) {
-        System.out.print("(");
         System.out.print(negation.getOperateur());
         negation.getOperateurGauche().accept(this);
-        System.out.print(")");
         return OptionalInt.empty();
     }
 
@@ -38,16 +36,16 @@ public class VisiteurInfixe implements Visiteur {
 
     public OptionalInt visiterUnaire(OperateurUnaire operateurUnaire) {
 
-        operateurUnaire.getOperateurGauche().accept(this);
         System.out.print(operateurUnaire.getOperateur());
+        operateurUnaire.getOperateurGauche().accept(this);
         return OptionalInt.empty();
     }
 
     public OptionalInt visiterBinaire(OperateurBinaire operateurBinaire) {
 
+        System.out.print(operateurBinaire.getOperateur());
         operateurBinaire.getOperateurGauche().accept(this);
         operateurBinaire.getOperateurDroit().accept(this);
-        System.out.print(operateurBinaire.getOperateur());
         return OptionalInt.empty();
 
     }
