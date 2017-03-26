@@ -1,14 +1,16 @@
+import java.util.OptionalInt;
+
 public interface Visiteur {
 
-    void visiterAddition(Addition addition);
+    OptionalInt visiterAddition(Addition addition);
 
-    void visiterMultiplication(Multiplication multiplication);
+    OptionalInt visiterMultiplication(Multiplication multiplication);
 
-    void visiterNegation(Negation negation);
+    OptionalInt visiterNegation(Negation negation);
 
-    void visiterConstante(Constante constante);
+    OptionalInt visiterConstante(Constante constante);
 
-    void visiterUnaire(OperateurUnaire operateurUnaire);
+    OptionalInt visiterUnaire(OperateurUnaire operateurUnaire);
 
-    void visiterBinaire(OperateurBinaire operateurBinaire);
+    OptionalInt visiterBinaire(OperateurBinaire operateurBinaire);
 }

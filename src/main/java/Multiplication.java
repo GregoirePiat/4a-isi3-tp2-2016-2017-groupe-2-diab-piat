@@ -1,10 +1,12 @@
+import java.util.OptionalInt;
+
 public class Multiplication extends OperateurBinaire{
 
 	public Multiplication( Noeud ng, Noeud nd) {
 		super("*", ng, nd);
 	}
 
-	public void accept(Visiteur v){
-		v.visiterMultiplication(this);
+	public OptionalInt accept(Visiteur v){
+		return v.visiterMultiplication(this);
 	}
 }

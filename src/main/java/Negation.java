@@ -1,9 +1,11 @@
+import java.util.OptionalInt;
+
 public class Negation extends OperateurUnaire{
 	public Negation(Noeud n) {
 		super("-", n);
 	}
 
-	public void accept(Visiteur v){
-		v.visiterNegation(this);
+	public OptionalInt accept(Visiteur v){
+		return v.visiterNegation(this);
 	}
 }

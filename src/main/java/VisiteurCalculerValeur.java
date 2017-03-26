@@ -1,26 +1,42 @@
+import java.util.OptionalInt;
+
 public class VisiteurCalculerValeur implements Visiteur {
 
-    public void visiterAddition(Addition addition) {
+    public OptionalInt visiterAddition(Addition addition) {
+        OptionalInt optionalIntGauche = addition.getOperateurGauche().accept(this);
+        OptionalInt optionalIntDroit = addition.getOperateurDroit().accept(this);
 
+        if (optionalIntGauche.isPresent() && optionalIntDroit.isPresent())
+            return OptionalInt.of(optionalIntGauche.getAsInt() + optionalIntDroit.getAsInt());
+        return  OptionalInt.empty();
     }
 
-    public void visiterMultiplication(Multiplication multiplication) {
+    public OptionalInt visiterMultiplication(Multiplication multiplication) {
+        OptionalInt optionalIntGauche = multiplication.getOperateurGauche().accept(this);
+        OptionalInt optionalIntDroit = multiplication.getOperateurDroit().accept(this);
 
+        if (optionalIntGauche.isPresent() && optionalIntDroit.isPresent())
+            return OptionalInt.of(optionalIntGauche.getAsInt() * optionalIntDroit.getAsInt());
+        return  OptionalInt.empty();
     }
 
-    public void visiterNegation(Negation negation) {
+    public OptionalInt visiterNegation(Negation negation) {
+        OptionalInt optionalIntGauche = negation.getOperateurGauche().accept(this);
 
+        if (optionalIntGauche.isPresent())
+            return OptionalInt.of(- optionalIntGauche.getAsInt());
+        return OptionalInt.empty();
     }
 
-    public void visiterConstante(Constante constante) {
-
+    public OptionalInt visiterConstante(Constante constante) {
+        return OptionalInt.of(constante.getValeur());
     }
 
-    public void visiterUnaire(OperateurUnaire operateurUnaire) {
-
+    public OptionalInt visiterUnaire(OperateurUnaire operateurUnaire) {
+        return OptionalInt.empty();
     }
 
-    public void visiterBinaire(OperateurBinaire operateurBinaire) {
-
+    public OptionalInt visiterBinaire(OperateurBinaire operateurBinaire) {
+        return OptionalInt.empty();
     }
 }

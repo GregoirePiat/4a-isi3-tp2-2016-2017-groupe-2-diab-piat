@@ -1,3 +1,5 @@
+import java.util.OptionalInt;
+
 public abstract class OperateurUnaire implements Noeud{
 	private String op;
 	private Noeud opG;
@@ -13,8 +15,8 @@ public abstract class OperateurUnaire implements Noeud{
 		return opG;
 	}
 
-	public void accept(Visiteur v){
-		v.visiterUnaire(this);
+	public OptionalInt accept(Visiteur v){
+		return v.visiterUnaire(this);
 	}
 
 }

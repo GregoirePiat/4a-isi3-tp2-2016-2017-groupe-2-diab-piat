@@ -1,3 +1,5 @@
+import java.util.OptionalInt;
+
 public class ExpressionArithmetique {
 	private Noeud racine;
 	
@@ -25,14 +27,14 @@ public class ExpressionArithmetique {
 
 	public int calculerValeur() {
 		VisiteurCalculerValeur visiteurCalculerValeur = new VisiteurCalculerValeur();
-		//TODO regarder optional(int) pour le retour
-		return 0;
+		OptionalInt optionalInt = this.getRacine().accept(visiteurCalculerValeur);
+		return optionalInt.isPresent() ? optionalInt.getAsInt() : 0;
 	}
 
 	public int calculerHauteur() {
 		VisiteurCalculerHauteur visiteurCalculerHauteur = new VisiteurCalculerHauteur();
-		//TODO regarder optional(int) pour le retour
-		return 0;
+		OptionalInt optionalInt = this.getRacine().accept(visiteurCalculerHauteur);
+		return optionalInt.isPresent() ? optionalInt.getAsInt() : 0;
 	}
 	public void afficherInFixe() {
 		System.out.println("\n infixe:");

@@ -1,3 +1,5 @@
+import java.util.OptionalInt;
+
 public abstract class OperateurBinaire  extends OperateurUnaire{
 
 	private Noeud opD;
@@ -11,8 +13,8 @@ public abstract class OperateurBinaire  extends OperateurUnaire{
 		return opD;
 	}
 
-	public void accept(Visiteur v){
-		v.visiterBinaire(this);
+	public OptionalInt accept(Visiteur v){
+		return v.visiterBinaire(this);
 	}
 
 

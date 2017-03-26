@@ -1,3 +1,5 @@
+import java.util.OptionalInt;
+
 public class Constante implements Noeud{
 	private int valeur;
 	public Constante(int v){
@@ -5,8 +7,8 @@ public class Constante implements Noeud{
 	}
 	public int getValeur(){return valeur;}
 
-	public void accept(Visiteur v){
-		v.visiterConstante(this);
+	public OptionalInt accept(Visiteur v){
+		return v.visiterConstante(this);
 	}
 
 }

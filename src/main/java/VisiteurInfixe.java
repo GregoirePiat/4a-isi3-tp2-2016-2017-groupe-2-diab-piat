@@ -1,41 +1,54 @@
+import java.util.OptionalInt;
+
 public class VisiteurInfixe implements Visiteur {
 
-    public void visiterAddition(Addition addition) {
+    public OptionalInt visiterAddition(Addition addition) {
         addition.getOperateurGauche().accept(this);
         System.out.print(addition.getOperateur());
         addition.getOperateurDroit().accept(this);
+        return OptionalInt.empty();
     }
 
-    public void visiterMultiplication(Multiplication multiplication) {
-
+    public OptionalInt visiterMultiplication(Multiplication multiplication) {
+        System.out.print("(");
         multiplication.getOperateurGauche().accept(this);
+        System.out.print(")");
+
         System.out.print(multiplication.getOperateur());
+        
+        System.out.print("(");
         multiplication.getOperateurDroit().accept(this);
+        System.out.print(")");
+        return OptionalInt.empty();
     }
 
-    public void visiterNegation(Negation negation) {
+    public OptionalInt visiterNegation(Negation negation) {
         System.out.print("(");
         System.out.print(negation.getOperateur());
         negation.getOperateurGauche().accept(this);
         System.out.print(")");
+        return OptionalInt.empty();
     }
 
-    public void visiterConstante(Constante constante) {
+    public OptionalInt visiterConstante(Constante constante) {
 
         System.out.print(constante.getValeur());
+        return OptionalInt.empty();
     }
 
-    public void visiterUnaire(OperateurUnaire operateurUnaire) {
+    public OptionalInt visiterUnaire(OperateurUnaire operateurUnaire) {
 
         operateurUnaire.getOperateurGauche().accept(this);
         System.out.print(operateurUnaire.getOperateur());
+        return OptionalInt.empty();
     }
 
-    public void visiterBinaire(OperateurBinaire operateurBinaire) {
+    public OptionalInt visiterBinaire(OperateurBinaire operateurBinaire) {
 
         operateurBinaire.getOperateurGauche().accept(this);
         operateurBinaire.getOperateurDroit().accept(this);
         System.out.print(operateurBinaire.getOperateur());
+        return OptionalInt.empty();
 
     }
 }

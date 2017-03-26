@@ -1,25 +1,27 @@
+import java.util.OptionalInt;
+
 public class VisiteurCalculerHauteur implements Visiteur {
-    public void visiterAddition(Addition addition) {
-
+    public OptionalInt visiterAddition(Addition addition) {
+        return OptionalInt.empty();
     }
 
-    public void visiterMultiplication(Multiplication multiplication) {
-
+    public OptionalInt visiterMultiplication(Multiplication multiplication) {
+        return OptionalInt.empty();
     }
 
-    public void visiterNegation(Negation negation) {
-
+    public OptionalInt visiterNegation(Negation negation) {
+        return OptionalInt.empty();
     }
 
-    public void visiterConstante(Constante constante) {
-
+    public OptionalInt visiterConstante(Constante constante) {
+        return OptionalInt.empty();
     }
 
-    public void visiterUnaire(OperateurUnaire operateurUnaire) {
-
+    public OptionalInt visiterUnaire(OperateurUnaire operateurUnaire) {
+        return OptionalInt.empty();
     }
 
-    public void visiterBinaire(OperateurBinaire operateurBinaire) {
-
+    public OptionalInt visiterBinaire(OperateurBinaire operateurBinaire) {
+        return OptionalInt.empty();
     }
 }

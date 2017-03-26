@@ -1,5 +1,7 @@
+import java.util.OptionalInt;
+
 public interface Noeud {
 
-    public void accept(Visiteur v);
+    public OptionalInt accept(Visiteur v);
 
 }
